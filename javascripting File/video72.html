@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 12</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            width: 60px;
+            margin: 15px;
+            padding: 15px;
+            border: 2px solid black;
+            color: rgb(56, 21, 233);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+        <div class="box">Box</div>
+    </div>
+    <script>
+         console.log("script install")
+
+        //  let boxes = document.getElementsByClassName("box")
+        let boxes = document.querySelector(".container").children
+        //  console.log(boxes)
+
+        function getRandomColor(){
+            let val1 = Math.ceil(0 + Math.random()*255);
+            let val2 = Math.ceil(0 + Math.random()*255);;
+            let val3 = Math.ceil(0 + Math.random()*255);;
+            return `rgb(${val1},${val2}, ${val3})`
+        }
+
+         Array.from(boxes).forEach(e=>{
+            // console.log(e)
+            e.style.backgroundColor = getRandomColor()
+            e.style.color = getRandomColor()
+         })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and Removing Elements using JavaScript </title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">I'm Aaditya Pal</div>
+    </div>
+
+    <script>
+        document.title = "Aditya Pal js ki class kra hai "
+        console.log(document.title)
+        console.log(document.querySelector(".container").classList.add("Aditya"))
+        // console.log(document.querySelector(".container"))
+        // console.log(document.querySelector(".container").innerHTML)
+        // console.log(document.querySelector(".box"))
+        // console.log(document.querySelector(".box").innerHTML)
+        // console.log(document.querySelector(".box").innerHTML = "Hello Adi")
+        // console.log(document.querySelector(".box").outerHTML)
+
+        //   console.log(document.querySelector(".box").hasAttribute('style'))
+        //   console.log(document.querySelector(".box").getAttribute('style'))
+        //   console.log(document.querySelector(".box").setAttribute('style','background-color:aqua'))
+        // console.log(document.querySelector(".box").removeAttribute('style'))
+
+    //     let div=document.createElement("div");
+    //     div.innerHTML = "Hello Adi How are you & insert <b> by Aditya </b>"
+    //     div.setAttribute("class","created");
+    //    console.log( document.querySelector(".container").append(div))
+
+         let cont = document.querySelector(".container")
+         cont.insertAdjacentHTML("beforeend","<b> hello insert hogaya hai .............</b>")
+    </script>
+</body>
+</html>

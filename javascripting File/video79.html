@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript try catch & Error Handling</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        let a = prompt("Enter the First number")
+
+        let b = prompt("Enter the Second number")
+
+        if(isNaN(a) || isNaN(b)){
+            throw SyntaxError("Chala ja bsdk")
+        }
+        let sum = parseInt(a) + parseInt(b)  //parseInt strinf change to integer value with help of pardeInt 
+        // console.log("The sum is "+ sum)
+        
+        try {
+            console.log("The sum is "+ sum*x)
+        } catch (error) {
+            console.log("error la diya bsdk")
+        }
+
+        finally{
+            console.log("Sab baand kro bsdk kuch nhi hoga")
+        }
+    </script>
+</body>
+
+</html>

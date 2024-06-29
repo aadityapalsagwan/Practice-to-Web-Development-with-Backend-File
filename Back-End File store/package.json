@@ -1,0 +1,19 @@
+{
+  "name": "adi",
+  "version": "1.0.0",
+  "description": "This is my youtube Channel site that link with my YouYube Channel.....",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aditya Pal",
+  "license": "ISC",
+  "dependencies": {
+    "fi": "^1.0.16",
+    "nodemon": "^3.0.2",
+    "slug": "^8.2.3",
+    "slugify": "^1.6.6"
+  }
+}

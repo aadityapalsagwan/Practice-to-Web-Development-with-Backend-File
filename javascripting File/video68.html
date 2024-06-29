@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 35px;
+            width: 50px;
+            margin: 35px;
+            padding: 30px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Aaditya Pal</div>
+        <div class="box">Aaditya Pal</div>
+        <div class="box">Aaditya Pal</div>
+        <div id="b" class="box">Aaditya 143</div>
+        <div class="box">Aaditya Pal</div>
+        <div class="box">Aaditya Pal</div>
+    </div>
+
+    <script>
+        console.log("Hello Adi")
+
+        let Adi = document.getElementsByClassName("box")
+        console.log(Adi)
+
+        Adi[2].style.backgroundColor="red"
+
+        document.getElementById("b").style.backgroundColor="yellow"
+
+        document.querySelector(".box").style.backgroundColor="green"
+
+    //    console.log(document.querySelector(".box"))
+       document.querySelectorAll(".box").forEach(e=>{
+        // console.log(e)
+        e.style.backgroundColor="aqua";
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes & Objects - Object Oriented Programming in Js</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        /*
+             let obj = {
+               a: 1,
+               b: "Aaditya Pal"
+             }
+             console.log(obj)
+       
+             let animal ={
+               eats:"true"
+             };
+       
+             let rabbit={
+               jumps:true
+             };
+       
+              rabbit.__proto__ = animal;  
+           */
+        // rabbit .[[Prorotype]] = animal
+        /*
+              class Animal{
+                constructor(name){
+                    this.name = name
+                    console.log("Object ko banaya jara hai....")
+                }
+        
+                eat(){
+                    console.log("Khana kha ra hu mai....")
+                }
+        
+                run(){
+                    console.log("Bhag bhai bhag .....")
+                }
+              }
+              let a = new Animal("Bunny");
+              console.log(a)
+        
+              class Lion extends Animal{
+        
+                constructor(name){
+                    super(name)
+                    console.log("Tumera baap hai sher hai bsdk...")
+                }
+        
+                shikre(){
+                    console.log("Shikre kerna hai bhai aj sab ka...")
+                }
+        
+                eat(){
+                    console.log("Kha liya hai tu bta......")
+                }
+        
+              }
+        
+              let l = new Lion("Shera");
+              console.log(l)
+        */
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+            get name() {
+                return this._name;
+            }
+
+            set name(value) {
+                if (value.length < 4) {
+                    console.log("Name is to short..")
+                    return;
+                }
+                this._name = value;
+            }
+        }
+
+        let user = new User("John");
+        console.log(user.name);
+        user.name ="Aditya";
+        console.log(user)
+         
+        // user = new User("");
+        // console.log(user)
+
+
+    </script>
+</body>
+
+</html>

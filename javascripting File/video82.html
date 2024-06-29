@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced JavaScript</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+    </div>
+
+    <script>
+        async function sleep() {
+            return Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(45)
+                }, 1000);
+            })
+        }
+
+        // IIFE method \ rule.....
+     /*
+        (async function main() {
+            let a = await sleep()
+            console.log(a)
+            let b = await sleep()
+            console.log(b);
+        })
+    */    
+
+/*
+        (async function main() {
+           
+            // let [x,y] =[1,5]
+            // console.log(x,y)
+
+            let [x,y,...rest] =[1,5,4,9,7,6,10,5]
+            console.log(x , y , rest)
+        })()
+
+*/
+        (async function main() {
+           
+            let obj ={
+                a:5,
+                b:8,
+                c:6
+            }
+
+            let {a,b} = obj
+            console.log(a,b)
+        })()
+
+
+
+
+    </script>
+</body>
+
+</html>

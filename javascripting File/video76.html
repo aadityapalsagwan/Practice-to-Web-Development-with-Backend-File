@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await & Fetch API in JavaScript with Examples</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+    <script>
+
+        // async and await properties are usend in this script 
+
+
+
+        // function getData() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve(455)
+        //         }, 3500);
+        //     })
+        // }
+
+        // async function getData() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve(455)
+        //         }, 3500);
+        //     })
+        // }
+
+        // async function main() {
+
+
+        //     console.log("Loading Module")
+
+        //     console.log("Do something else")
+
+        //     console.log("Load Data")
+
+        //     // let data = getData()
+        //     let data = await getData()
+
+        //     console.log(data)
+        //     console.log("Process data")
+
+        //     console.log("task 2")
+
+        // }
+        
+        // main()
+        
+        // data.then((v) => {
+        //     console.log(data)
+        //     console.log("Process data")
+
+        //     console.log("task 2")
+        // })
+    </script>
+
+    <script>
+        // fetch propertise are used in this script 
+
+        console.log(" Fetch Propertise are used in this propertise ")
+
+     async function getData() {
+            
+       let x = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+
+       let data = await x.json()
+         console.log(x)
+         return 456
+
+
+        // .then(response => response.json())
+        // .then(json => console.log(json))
+        }
+
+        async function main() {
+
+
+            console.log("Loading Module")
+
+            console.log("Do something else")
+
+            console.log("Load Data")
+
+            // let data = getData()
+            let data = await getData()
+
+            console.log(data)
+            console.log("Process data")
+
+            console.log("task 2")
+
+        }
+        
+        main()
+    </script>
+</body>
+
+</html>

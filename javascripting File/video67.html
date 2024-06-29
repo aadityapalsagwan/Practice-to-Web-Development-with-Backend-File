@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/photo/bg.jpeg" type="image/x-icon">
+    <title>JavaScript DOM - Children, Parent & Sibling Nodes</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            margin: 15px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Aaditya</td>
+            <td>21</td>
+        </tr>
+    </table>
+    <script>
+       console.log("Hello Aaditya Pal")
+       console.log(document.body)
+       console.log(document.body.children)
+    //    console.log(document.body.childNodes[0])
+    //    console.log(document.body.childNodes[1])
+    //    console.log(document.body.childNodes[1].childNodes[1])
+
+       let cont = document.body.childNodes[1]
+       console.log(cont)
+       console.log(cont.firstChild)
+       console.log(cont.firstChild.children)
+       console.log(cont.firstElementChild)
+       console.log(cont.lastElementChild)
+       console.log(cont.lastElementChild.style.color="red")
+       console.log(cont.lastElementChild.style.backgroundColor="yellow")
+    </script>
+</body>
+</html>

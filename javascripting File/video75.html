@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Callbacks & Promises</title>
+</head>
+
+<body>
+
+
+    <script>
+        //  Call Back function are used in this script.......
+
+
+        // console.log("Adi is a hacker")
+        // console.log("Shagun is a hecker")
+
+        // setTimeout(()=>{
+        //     console.log("I'm inside settimeout")
+        // }, 5000);
+
+        // console.log("The End")
+
+        const callback = (arg) => {
+            console.log(arg)
+        }
+
+        const loadScript = (src, callback) => {
+            let sc = document.createElement("script");
+            sc.src = src;
+            sc.onload = callback("Aditya");
+            document.head.append(sc)
+        }
+
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback)
+    </script>
+
+    <script>
+        //  Promises  function are used in this script.......
+
+        console.log('This is promises');
+
+
+        let prom1 = new Promise((resolve, reject) => {
+
+            let a = Math.random();
+            if (a < 0.5) {
+                reject("no random Number was not supported...")
+            }
+
+            else {
+                setTimeout(() => {
+                    console.log("Kaam pura hua Done")
+                    resolve("Aditya Pal")
+                }, 3000);
+            }
+        })
+
+        let prom2 = new Promise((resolve, reject) => {
+
+            let a = Math.random();
+            if (a < 0.5) {
+                reject("no random Number was not supported...  2")
+            }
+
+            else {
+                setTimeout(() => {
+                    console.log("Kaam pura hua Done  2")
+                    resolve("Aditya Pal 2")
+                }, 1000);
+            }
+        })
+
+        let p3 = Promise.all([prom1 , prom2])
+        // let p3 = Promise.allSettled([prom1 , prom2])
+        p3.then((a) => {
+            console.log(a)
+        }).catch((err) => {
+            console.log(err)
+        })
+
+        // prom1.then((a) => {
+        //     console.log(a)
+        // }).catch((err) => {
+        //     console.log(err)
+        // })
+    </script>
+</body>
+
+</html>

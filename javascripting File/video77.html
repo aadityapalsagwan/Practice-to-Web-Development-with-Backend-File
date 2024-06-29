@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13 Solution</title>
+    <style>
+        .card {
+            display: flex;
+            margin: auto;
+            /* border: 2px solid black; */
+            border-radius: 10px;
+            width: 80%;
+            padding: 12px;
+            background-color: #131010;
+        }
+
+        .image img {
+            width: 250px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .text h1 {
+            color: #fff;
+            font-size: 24px;
+            font-family: system-ui;
+        }
+
+        .text p {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 200;
+            font-family: sans-serif;
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .capsule {
+            position: absolute;
+            bottom: 24px;
+            right: 20px;
+            padding: 3px;
+            background: #333131;
+            color: #fff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/BGeDBfCIqas/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBuhpUj-ErJicHq24jgB_3K2Chl_Q"
+                    alt="thumbnail">
+
+                <div class="capsule">31:06</div>
+            </div>
+            <div class="text">
+                <h1>JavaScript Exercise 13 - Solution & Shoutouts | Sigma Web Development Course - Tutorial #77</h1>
+                <p>CodeWithHarry &bull; 727K views &bull; 2 weeks ago</p>
+            </div>
+
+        </div>`
+    </div>
+
+
+    <script>
+        function createCard(title, cName, views, monthOld, duration, thumbnails) {
+            // finish functon 
+            let viewStr
+            if (views < 100) {
+                viewStr = views ;
+            }
+
+            else if (views > 1000000) {
+                viewStr = views / 1000000 + "M";
+            }
+            else {
+                viewStr = views/ 1000 + "K" ;
+            }
+            let html = `<div class="card">
+            <div class="image">
+                <img src="${thumbnails}" alt="thumbnail">
+                <div class="capsule">${duration}</div>
+            </div>
+            <div class="text">
+                <h1>${title}</h1>
+                <p>${cName} &bull; ${viewStr} views &bull; ${monthOld} weeks ago</p>
+            </div>
+
+        </div>`
+
+            document.querySelector(".container").innerHTML = document.querySelector(".container").innerHTML + html
+        }
+
+        createCard("Introduction to Backend | Sigma Web Development Course - Tutorial #85" ,"CodeWithHarry",20000000, 7,"31:06" , "https://i.ytimg.com/vi/BGeDBfCIqas/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBuhpUj-ErJicHq24jgB_3K2Chl_Q")
+    </script>
+
+    <!-- JavaScript Exercise 13 - Solution & Shoutouts | Sigma Web Development Course - Tutorial #77 -->
+
+    <!-- https://i.ytimg.com/vi/BGeDBfCIqas/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBuhpUj-ErJicHq24jgB_3K2Chl_Q -->
+</body>
+
+</html>

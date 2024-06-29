@@ -1,0 +1,21 @@
+{
+  "name": "adi",
+  "version": "1.0.0",
+  "description": "This is my youtube Channel site that link with my YouYube Channel.....",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aditya Pal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fi": "^1.0.16",
+    "global": "^4.4.0",
+    "slug": "^8.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

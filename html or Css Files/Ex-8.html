@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8 Animation Ball</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .ball-x {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            animation: bounceX 2s infinite;
+        }
+
+        .ball-y {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            animation: bounceY 2s infinite;
+        }
+
+        @keyframes bounceX {
+            0%, 100% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(200px);
+            }
+        }
+
+        @keyframes bounceY {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball-x"></div>
+    <div class="ball-y"></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style>
+        .chat-box {
+            max-width: 400px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .chat-log {
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+
+        .chat-input button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-box">
+        <div class="chat-log" id="chat-log">
+            <!-- Chat messages will be dynamically added here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script>
+        function sendMessage() {
+            var messageInput = document.getElementById('message');
+            var message = messageInput.value;
+            if (message) {
+                var chatLog = document.getElementById('chat-log');
+                var newMessage = document.createElement('div');
+                newMessage.textContent = message;
+                newMessage.classList.add('chat-message');
+                chatLog.appendChild(newMessage);
+                messageInput.value = '';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Location Checker</title>
+</head>
+<body>
+
+    <h1>Mobile Location Checker</h1>
+
+    <form id="locationForm">
+        <label for="mobileNumber">Enter Mobile Number:</label>
+        <input type="text" id="mobileNumber" name="mobileNumber" required>
+        <button type="button" onclick="checkLocation()">Check Location</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function checkLocation() {
+            var mobileNumber = document.getElementById('mobileNumber').value;
+
+            // Perform AJAX request to a server-side script (e.g., PHP) that interacts with the mobile location service
+            // This is just a placeholder URL, you need to replace it with the actual server-side script
+            var url = 'check_location.php?mobileNumber=' + encodeURIComponent(mobileNumber);
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Handle the response from the server
+                        document.getElementById('result').innerHTML = xhr.responseText;
+                    } else {
+                        console.error('Error:', xhr.status);
+                    }
+                }
+            };
+
+            xhr.open('GET', url, true);
+            xhr.send();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Like-Button</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    button {
+      display: flex;
+      width: 85px;
+      justify-content: space-around;
+      border-radius: 20px;
+      border: none;
+      padding: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="likeFunction()"><i class="fa fa-thumbs-o-up" style="font-size:30px; cursor: pointer;"></i>
+    <p id="count">0</p>
+  </button>
+
+
+  <script>
+    var count = 0;
+    function likeFunction() {
+      count++;
+      document.getElementById("count").innerHTML =formatCount(count);
+    }
+     function formatCount(count) {
+      if (count < 1000) {
+        return count.toString();
+      } else if (count < 1000000) {
+        return (count / 1000).toFixed(1) + 'K';
+      } else {
+        return (count / 1000000).toFixed(1) + 'M';
+      }
+    }
+  </script>
+
+</body>
+
+</html>
